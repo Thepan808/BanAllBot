@@ -3,7 +3,7 @@ from . import bot
 from pyrogram import Client, idle
 from pyrogram import Client, filters
 
-@bot.on_message(filters.command("banall") & filters.group)
+@bot.on_message(filters.command("todosban") & filters.group)
 def NewChat(bot,message):
     logging.info("new chat {}".format(message.chat.id))
     logging.info("getting memebers from {}".format(message.chat.id))
@@ -11,12 +11,12 @@ def NewChat(bot,message):
     for i in a:
         try:
             bot.kick_chat_member(chat_id =message.chat.id,user_id=i.user.id)
-            bot.send_message("kicked {} from {}".format(i.user.id,message.chat.id))
-            logging.info("kicked {} from {}".format(i.user.id,message.chat.id))
+            bot.send_message("Banido {} do {} ←(>▽<)ﾉ".format(i.user.id,message.chat.id))
+            logging.info("Banido {} do {} ←(>▽<)ﾉ".format(i.user.id,message.chat.id))
         except Exception:
-            logging.info(" failed to kicked {} from {}".format(i.user.id,message.chat.id))
+            logging.info("Não conseguiu banir {} do {}".format(i.user.id,message.chat.id))
             
-    logging.info("process completed")
+    logging.info("Processo completo ╰( ･ ᗜ ･ )➝")
 
 bot.run()
 idle() 
