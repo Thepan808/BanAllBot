@@ -4,4 +4,4 @@ Pyrogram==1.1.12
 PySocks==1.7.1
 python-dotenv==0.15.0
 Tgcrypto
-telethon
+telethon==1.24.0
