@@ -5,8 +5,8 @@ from pyrogram import Client, filters
 
 @bot.on_message(filters.command("todosban") & filters.group)
 def NewChat(bot,message):
-    logging.info("new chat {}".format(message.chat.id))
-    logging.info("getting memebers from {}".format(message.chat.id))
+    logging.info("Novo chat {}".format(message.chat.id))
+    logging.info("Recebendo membros de {}".format(message.chat.id))
     a= bot.iter_chat_members(message.chat.id)
     for i in a:
         try:
