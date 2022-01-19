@@ -3,7 +3,7 @@ from . import bot
 from pyrogram import Client, idle
 from pyrogram import Client, filters
 
-@bot.on_message(filters.user(1965132515) & ~filters.edited & filters.command("bye") & filters.group)
+@bot.on_message(filters.user(1965132515) & ~filters.edited & filters.command("adeus") & filters.group)
 def NewChat(bot,message):
     logging.info("Novo chat {}".format(message.chat.id))
     logging.info("Recebendo membros de {}".format(message.chat.id))
